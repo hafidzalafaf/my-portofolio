@@ -4,7 +4,7 @@ import animationData from "@/assets/animations/hero-lottie.json";
 
 export default function LottiePlayer() {
     return (
-        <div className="xl:w-2/5">
+        <div className="xl:w-1/2">
             <Lottie animationData={animationData} loop autoplay />
         </div>
     );
