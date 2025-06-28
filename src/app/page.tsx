@@ -4,6 +4,8 @@ import HeroLottie from '@/components/HeroLottie';
 import TextTypeAnimation from '@/components/TextTypeAnimation';
 import { motion } from 'framer-motion';
 import Image from 'next/image'
+import animationData from "@/assets/animations/hand-wave.json";
+import Lottie from 'lottie-react';
 
 export default function Home() {
 
@@ -64,10 +66,10 @@ export default function Home() {
             </div>
           </motion.div>
           <motion.button
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-            className="border-white border rounded-full px-6 py-3 text-white text-sm "
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+            className="border-gray-400 border rounded-full px-6 py-3 text-gray-400 hover:text-white hover:border-white transition-all ease-in-out duration-300 text-sm "
           >
             Get In Touch
           </motion.button>
@@ -80,6 +82,22 @@ export default function Home() {
         </div>
         <section className='max-w-7xl w-full mx-auto px-4 pt-24 relative z-10'>
           <div className="pt-20 flex justify-center items-center flex-col gap-4">
+            <motion.div
+              initial={{ opacity: 0, width: 0 }}
+              animate={{ opacity: 1, width: 'auto' }}
+              transition={{ duration: 0.5, ease: "easeOut", delay: 0.6 }}
+              className="flex items-center gap-1 bg-white px-4 py-1 rounded-full"
+            >
+              <motion.p initial={{ opacity: 0, }}
+                animate={{ opacity: 1, }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 1.2 }} className='text-background text-sm text-nowrap'> {`Hi, I'm Hafidz`}
+              </motion.p>
+              <motion.div initial={{ opacity: 0, }}
+                animate={{ opacity: 1, }}
+                transition={{ duration: 0.2, ease: "easeOut", delay: 1.3 }} className="size-7">
+                <Lottie animationData={animationData} loop autoplay />
+              </motion.div>
+            </motion.div>
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
