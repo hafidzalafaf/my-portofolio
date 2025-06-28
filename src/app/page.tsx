@@ -5,6 +5,7 @@ import TextTypeAnimation from '@/components/TextTypeAnimation';
 import { motion } from 'framer-motion';
 import Image from 'next/image'
 import animationData from "@/assets/animations/hand-wave.json";
+import ChevronDown from "@/assets/animations/chevron-down.json";
 import Lottie from 'lottie-react';
 
 export default function Home() {
@@ -44,7 +45,6 @@ export default function Home() {
             >
               <Image alt='logo image' src={'/assets/icons/hafidz-logo.png'} width={36} height={36} />
             </motion.div>
-            {/* <h3 className='text-white font-semibold text-xl'>HafidzAL</h3> */}
           </div>
           <motion.div
             initial={{ opacity: 1, width: 40, overflow: 'hidden' }}
@@ -104,7 +104,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 1 }}
-              className='text-white font-bold text-6xl'
+              className='text-white font-bold text-7xl'
             >
               Frontend Developer
             </motion.h1>
@@ -145,7 +145,13 @@ export default function Home() {
               <HeroLottie />
             </motion.div>
           </div>
-          <div className="flex justify-start absolute right-0 flex-col bottom-[20%] gap-10">
+          <div className="flex justify-start absolute left-0 top-[95vh] gap-1 cursor-pointer">
+            <p className='text-white text-sm '>Scroll Down</p>
+            <div className="size-6">
+              <Lottie animationData={ChevronDown} loop autoplay />
+            </div>
+          </div>
+          {/* <div className="flex justify-start absolute right-0 flex-col bottom-[20%] gap-10">
             <motion.div initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: "easeOut", delay: 2 }} className=" flex justify-between gap-2">
@@ -164,9 +170,44 @@ export default function Home() {
               <p className='text-gray-400 text-sm'>Clients </p>
               <h3 className='text-4xl font-bold text-gray-200 flex items-start'>15 <span className='text-gray-200 text-4xl'>+</span></h3>
             </motion.div>
-          </div>
+          </div> */}
         </section>
-        <section className='max-w-7xl w-full mx-auto px-4 pt-6 pb-10 relative z-10'>
+        <section className='max-w-7xl w-full mx-auto px-4 pt-6 pb-10 relative z-10 flex justify-between gap-8 items-center'>
+          <motion.div initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, ease: "easeOut", delay: 0.6 }} className="flex flex-col gap-4">
+            <h6 className='text-white font-semibold text-lg'>User Centric Thinking</h6>
+            <p className='text-gray-400 text-sm'>Design and build interfaces that are intuitive, accessible and enjoyable to use.</p>
+          </motion.div>
+          <motion.div initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, ease: "easeOut", delay: 0.7 }} className="bg-gray-500 h-20 w-[1px] rounded-full"></motion.div>
+          <motion.div initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, ease: "easeOut", delay: 0.8 }} className="flex flex-col gap-4">
+            <h6 className='text-white font-semibold text-lg'>Atention to Detail</h6>
+            <p className='text-gray-400 text-sm'>Small design inconsistencies or broken UI interactions can negatively affect user experience.</p>
+          </motion.div>
+          <motion.div initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, ease: "easeOut", delay: 0.9 }} className="bg-gray-500 h-20 w-[1px] rounded-full"></motion.div>
+          <motion.div initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, ease: "easeOut", delay: 1 }} className="flex flex-col gap-4">
+            <h6 className='text-white font-semibold text-lg'>Collaboration</h6>
+            <p className='text-gray-400 text-sm'>Work effectively with designers, backend developers, and product managers to bring ideas to life.</p>
+          </motion.div>
+          <motion.div initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, ease: "easeOut", delay: 1.1 }} className="bg-gray-500 h-20 w-[1px] rounded-full"></motion.div>
+          <motion.div initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, ease: "easeOut", delay: 1.2 }} className="flex flex-col gap-4">
+            <h6 className='text-white font-semibold text-lg'>Problem Solving</h6>
+            <p className='text-gray-400 text-sm'>Analyze issues logically, debug efficiently, and create effective solutions.</p>
+          </motion.div>
+        </section>
+        <section className='min-h-screen'>
 
         </section>
       </main>
