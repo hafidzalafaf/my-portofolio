@@ -32,6 +32,7 @@ export default function Home() {
 
   return (
     <>
+      {/* HEADER SECTION */}
       <header className="bg-transparent z-50 fixed left-0 top-0 right-0 ">
         <div className="max-w-7xl w-full mx-auto px-4 flex justify-between items-center py-4 ">
           <div className="relative flex gap-2 items-center w-">
@@ -50,7 +51,7 @@ export default function Home() {
             animate={{ opacity: 1, width: 'max-content', overflow: 'auto' }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <div className="flex gap-12 bg-gradientStart bg-opacity-25 rounded-full px-6 py-4">
+            <div className="flex gap-12 bg-gradientStart bg-opacity-25 backdrop-blur-xl rounded-full px-6 py-4">
               {['About Me', 'Projects', 'Experiences', 'Testimonial', 'FAQ'].map((text, index) => (
                 <motion.a
                   key={text}
@@ -77,6 +78,7 @@ export default function Home() {
 
       </header>
 
+      {/* MAIN CONTENT */}
       <main className="relative bg-background min-h-screen z-0">
         <div className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-screen bg-hero-radial z-0">
         </div>
@@ -131,7 +133,7 @@ export default function Home() {
                 transition={{ duration: 0.8, ease: "easeOut", delay: 1.4 }}
                 className="border-white border rounded-full px-10 py-3 text-white text-sm "
               >
-                Download CV
+                Latest Project
               </motion.button>
             </div>
             <motion.div
@@ -143,8 +145,28 @@ export default function Home() {
               <HeroLottie />
             </motion.div>
           </div>
+          <div className="flex justify-start absolute right-0 flex-col bottom-[20%] gap-10">
+            <motion.div initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: 2 }} className=" flex justify-between gap-2">
+              <p className='text-gray-400 text-sm'>Years Of <br /> Experiences</p>
+              <h3 className='text-4xl font-bold text-gray-200 flex items-start'>3 <span className='text-gray-200 text-4xl'>+</span></h3>
+            </motion.div>
+            <motion.div initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: 2.2 }} className=" flex justify-between gap-2">
+              <p className='text-gray-400 text-sm'>Complete <br /> Project</p>
+              <h3 className='text-4xl font-bold text-gray-200 flex items-start'>30 <span className='text-gray-200 text-4xl'>+</span></h3>
+            </motion.div>
+            <motion.div initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: 2.4 }} className=" flex justify-between gap-2">
+              <p className='text-gray-400 text-sm'>Clients </p>
+              <h3 className='text-4xl font-bold text-gray-200 flex items-start'>15 <span className='text-gray-200 text-4xl'>+</span></h3>
+            </motion.div>
+          </div>
         </section>
-        <section className='min-h-screen'>
+        <section className='max-w-7xl w-full mx-auto px-4 pt-6 pb-10 relative z-10'>
 
         </section>
       </main>
