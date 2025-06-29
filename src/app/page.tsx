@@ -151,28 +151,83 @@ export default function Home() {
               <Lottie animationData={ChevronDown} loop autoplay />
             </div>
           </div>
-          {/* <div className="flex justify-start absolute right-0 flex-col bottom-[20%] gap-10">
-            <motion.div initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut", delay: 2 }} className=" flex justify-between gap-2">
-              <p className='text-gray-400 text-sm'>Years Of <br /> Experiences</p>
-              <h3 className='text-4xl font-bold text-gray-200 flex items-start'>3 <span className='text-gray-200 text-4xl'>+</span></h3>
-            </motion.div>
-            <motion.div initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut", delay: 2.2 }} className=" flex justify-between gap-2">
-              <p className='text-gray-400 text-sm'>Complete <br /> Project</p>
-              <h3 className='text-4xl font-bold text-gray-200 flex items-start'>30 <span className='text-gray-200 text-4xl'>+</span></h3>
-            </motion.div>
-            <motion.div initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut", delay: 2.4 }} className=" flex justify-between gap-2">
-              <p className='text-gray-400 text-sm'>Clients </p>
-              <h3 className='text-4xl font-bold text-gray-200 flex items-start'>15 <span className='text-gray-200 text-4xl'>+</span></h3>
-            </motion.div>
-          </div> */}
         </section>
-        <section className='max-w-7xl w-full mx-auto px-4 pt-6 pb-10 relative z-10 flex justify-between gap-8 items-center'>
+        <section className='max-w-7xl w-full mx-auto px-4 pt-6 pb-10 relative z-10 flex justify-center'>
+          <div className="max-w-5xl flex justify-center items-center gap-10 flex-wrap">
+            <Image className='grayscale opacity-40 transition-all duration-300 ease-in-out hover:grayscale-0 hover:opacity-100' alt='typescript logo' width={38} height={38} src={'/assets/icons/typescript.webp'}>
+            </Image>
+            <Image className='grayscale opacity-40 transition-all duration-300 ease-in-out hover:grayscale-0 hover:opacity-100' alt='typescript logo' width={38} height={38} src={'/assets/icons/javascript.png'}>
+            </Image>
+            <Image className='grayscale opacity-40 transition-all duration-300 ease-in-out hover:grayscale-0 hover:opacity-100' alt='typescript logo' width={48} height={48} src={'/assets/icons/web3.png'}>
+            </Image>
+            <Image className='grayscale opacity-40 transition-all duration-300 ease-in-out hover:grayscale-0 hover:opacity-100' alt='typescript logo' width={68} height={48} src={'/assets/icons/wagmi.png'}>
+            </Image>
+            <Image className='grayscale opacity-40 transition-all duration-300 ease-in-out hover:grayscale-0 hover:opacity-100' alt='typescript logo' width={58} height={48} src={'/assets/icons/viem.png'}>
+            </Image>
+            <Image className='grayscale opacity-40 transition-all duration-300 ease-in-out hover:grayscale-0 hover:opacity-100' alt='typescript logo' width={78} height={48} src={'/assets/icons/ethers.png'}>
+            </Image>
+            <Image className='grayscale opacity-40 transition-all duration-300 ease-in-out hover:grayscale-0 hover:opacity-100' alt='typescript logo' width={78} height={48} src={'/assets/icons/next.png'}>
+            </Image>
+            <Image className='grayscale opacity-40 transition-all duration-300 ease-in-out hover:grayscale-0 hover:opacity-100' alt='typescript logo' width={38} height={38} src={'/assets/icons/vite.png'}>
+            </Image>
+            <Image className='grayscale opacity-40 transition-all duration-300 ease-in-out hover:grayscale-0 hover:opacity-100' alt='typescript logo' width={38} height={38} src={'/assets/icons/redux.svg'}>
+            </Image>
+            <Image className='grayscale opacity-40 transition-all duration-300 ease-in-out hover:grayscale-0 hover:opacity-100' alt='typescript logo' width={68} height={48} src={'/assets/icons/websocket.png'}>
+            </Image>
+            <Image className='grayscale opacity-40 transition-all duration-300 ease-in-out hover:grayscale-0 hover:opacity-100' alt='typescript logo' width={48} height={48} src={'/assets/icons/restapi.png'}>
+            </Image>
+            <Image className='grayscale opacity-40 transition-all duration-300 ease-in-out hover:grayscale-0 hover:opacity-100' alt='typescript logo' width={48} height={48} src={'/assets/icons/tailwind.png'}>
+            </Image>
+            <Image className='grayscale opacity-40 transition-all duration-300 ease-in-out hover:grayscale-0 hover:opacity-100' alt='typescript logo' width={48} height={48} src={'/assets/icons/bootstrap.png'}>
+            </Image>
+            <Image className='grayscale opacity-40 transition-all duration-300 ease-in-out hover:grayscale-0 hover:opacity-100' alt='typescript logo' width={48} height={48} src={'/assets/icons/sass.png'}>
+            </Image>
+            <Image className='grayscale opacity-40 transition-all duration-300 ease-in-out hover:grayscale-0 hover:opacity-100' alt='typescript logo' width={48} height={48} src={'/assets/icons/postcss.png'}>
+            </Image>
+            <Image className='grayscale opacity-40 transition-all duration-300 ease-in-out hover:grayscale-0 hover:opacity-100' alt='typescript logo' width={48} height={48} src={'/assets/icons/github.png'}>
+            </Image>
+            <Image className='grayscale opacity-40 transition-all duration-300 ease-in-out hover:grayscale-0 hover:opacity-100' alt='typescript logo' width={78} height={48} src={'/assets/icons/git.png'}>
+            </Image>
+            <Image className='grayscale opacity-40 transition-all duration-300 ease-in-out hover:grayscale-0 hover:opacity-100' alt='typescript logo' width={48} height={48} src={'/assets/icons/html.png'}>
+            </Image>
+            <Image className='grayscale opacity-40 transition-all duration-300 ease-in-out hover:grayscale-0 hover:opacity-100' alt='typescript logo' width={58} height={48} src={'/assets/icons/css3.png'}>
+            </Image>
+          </div>
+        </section>
+        <section className='max-w-6xl w-full mx-auto px-4 py-36 relative z-10 flex items-center'>
+          <div className="flex-1">
+            <div className="w-full">
+              <Image src={'/assets/images/user-image-2.jpg'} alt='user image' width={100} height={100} className='w-4/5 rounded-2xl'></Image>
+            </div>
+          </div>
+          <div className="flex-1 flex flex-col gap-6">
+            <h3 className='text-white text-4xl font-bold'>Turning Vision into Interactive Reality</h3>
+            <div className="">
+              <p className='text-gray-400 text-sm leading-6'>{`I'm a Frontend Developer with a passion for crafting clean, responsive, and user-focused web interfaces using modern technologies like React, Next.js, and Tailwind CSS. I combine strong UI/UX principles, attention to detail, and problem-solving skills to turn ideas into intuitive digital experiences. I thrive in collaborative environments, value clear communication, and aim to bridge the gap between design and development — delivering fast, accessible, and scalable solutions that not only work flawlessly but also feel great to use.`}</p>
+            </div>
+            <div className="flex items-center  gap-8">
+              <motion.div initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: "easeOut", delay: 2 }} className=" flex justify-between gap-2">
+                <h3 className='text-4xl font-bold text-gray-200 flex items-start'>3 <span className='text-gray-200 text-4xl'>+</span></h3>
+                <p className='text-gray-400 text-sm'>Years Of <br /> Experiences</p>
+              </motion.div>
+              <motion.div initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: "easeOut", delay: 2.2 }} className=" flex justify-between gap-2">
+                <h3 className='text-4xl font-bold text-gray-200 flex items-start'>30 <span className='text-gray-200 text-4xl'>+</span></h3>
+                <p className='text-gray-400 text-sm'>Complete <br /> Project</p>
+              </motion.div>
+              <motion.div initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: "easeOut", delay: 2.4 }} className=" flex justify-between gap-2">
+                <h3 className='text-4xl font-bold text-gray-200 flex items-start'>10 <span className='text-gray-200 text-4xl'>+</span></h3>
+                <p className='text-gray-400 text-sm'>Clients </p>
+              </motion.div>
+            </div>
+          </div >
+        </section>
+        <section className='max-w-7xl w-full mx-auto px-4 py-20 relative z-10 flex justify-between gap-8 items-center'>
           <motion.div initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: "easeOut", delay: 0.6 }} className="flex flex-col gap-4">
@@ -207,9 +262,7 @@ export default function Home() {
             <p className='text-gray-400 text-sm'>Analyze issues logically, debug efficiently, and create effective solutions.</p>
           </motion.div>
         </section>
-        <section className='min-h-screen'>
 
-        </section>
       </main>
     </>
   );
