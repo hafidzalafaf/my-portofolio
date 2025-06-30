@@ -7,10 +7,11 @@ import Image from 'next/image'
 import animationData from "@/assets/animations/hand-wave.json";
 import ChevronDown from "@/assets/animations/chevron-down.json";
 import Lottie from 'lottie-react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { useEffect, useState } from 'react';
 
 export default function Home() {
-
-
   const ToolsTexts = [
     'React.', 1000,
     'Typescript.', 1000,
@@ -30,6 +31,36 @@ export default function Home() {
     'Redux.', 1000,
     'Websocket.', 1000,
   ]
+
+  const [showScroll, setShowScroll] = useState(true)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScroll(window.scrollY <= 0)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  const ShowScroll = () => {
+    if (showScroll)
+      return (
+        <motion.div
+          key="scroll-indicator"
+          initial={{ opacity: 0, }}
+          animate={{ opacity: 1, }}
+          exit={{ opacity: 0, }}
+          transition={{ duration: 0.5, ease: 'easeOut', delay: 0.4 }}
+          className="flex justify-start absolute left-0 top-[95vh] gap-1 cursor-pointer">
+          <p className='text-white text-sm '>Scroll Down</p>
+          <div className="size-6">
+            <Lottie animationData={ChevronDown} loop autoplay />
+          </div>
+        </motion.div>
+      )
+  }
+
 
   return (
     <>
@@ -87,16 +118,16 @@ export default function Home() {
             <motion.div
               initial={{ opacity: 0, width: 0 }}
               animate={{ opacity: 1, width: 'auto' }}
-              transition={{ duration: 0.5, ease: "easeOut", delay: 0.6 }}
+              transition={{ duration: 0.5, ease: "easeOut", delay: 0.4 }}
               className="flex items-center gap-1 bg-white px-4 py-1 rounded-full"
             >
               <motion.p initial={{ opacity: 0, }}
                 animate={{ opacity: 1, }}
-                transition={{ duration: 0.8, ease: "easeOut", delay: 1.2 }} className='text-background text-sm text-nowrap'> {`Hi, I'm Hafidz`}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.9 }} className='text-background text-sm text-nowrap'> {`Hi, I'm Hafidz`}
               </motion.p>
               <motion.div initial={{ opacity: 0, }}
                 animate={{ opacity: 1, }}
-                transition={{ duration: 0.2, ease: "easeOut", delay: 1.3 }} className="size-7">
+                transition={{ duration: 0.2, ease: "easeOut", delay: 1 }} className="size-7">
                 <Lottie animationData={animationData} loop autoplay />
               </motion.div>
             </motion.div>
@@ -122,7 +153,7 @@ export default function Home() {
               <motion.button
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, ease: "easeOut", delay: 1.3 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 1.2 }}
                 className="bg-primary rounded-full px-10 py-3 text-white text-sm "
               >
                 Contact Me
@@ -130,7 +161,7 @@ export default function Home() {
               <motion.button
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, ease: "easeOut", delay: 1.4 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 1.3 }}
                 className="border-white border rounded-full px-10 py-3 text-white text-sm "
               >
                 Latest Project
@@ -139,92 +170,195 @@ export default function Home() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut", delay: 1.6 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 1.4 }}
               className="flex justify-center"
             >
               <HeroLottie />
             </motion.div>
           </div>
-          <div className="flex justify-start absolute left-0 top-[95vh] gap-1 cursor-pointer">
-            <p className='text-white text-sm '>Scroll Down</p>
-            <div className="size-6">
-              <Lottie animationData={ChevronDown} loop autoplay />
-            </div>
-          </div>
+          <ShowScroll />
         </section>
         <section className='max-w-7xl w-full mx-auto px-4 pt-6 pb-10 relative z-10 flex justify-center'>
           <div className="max-w-5xl flex justify-center items-center gap-10 flex-wrap">
-            <Image className='grayscale opacity-40 transition-all duration-300 ease-in-out hover:grayscale-0 hover:opacity-100' alt='typescript logo' width={38} height={38} src={'/assets/icons/typescript.webp'}>
-            </Image>
-            <Image className='grayscale opacity-40 transition-all duration-300 ease-in-out hover:grayscale-0 hover:opacity-100' alt='typescript logo' width={38} height={38} src={'/assets/icons/javascript.png'}>
-            </Image>
-            <Image className='grayscale opacity-40 transition-all duration-300 ease-in-out hover:grayscale-0 hover:opacity-100' alt='typescript logo' width={48} height={48} src={'/assets/icons/web3.png'}>
-            </Image>
-            <Image className='grayscale opacity-40 transition-all duration-300 ease-in-out hover:grayscale-0 hover:opacity-100' alt='typescript logo' width={68} height={48} src={'/assets/icons/wagmi.png'}>
-            </Image>
-            <Image className='grayscale opacity-40 transition-all duration-300 ease-in-out hover:grayscale-0 hover:opacity-100' alt='typescript logo' width={58} height={48} src={'/assets/icons/viem.png'}>
-            </Image>
-            <Image className='grayscale opacity-40 transition-all duration-300 ease-in-out hover:grayscale-0 hover:opacity-100' alt='typescript logo' width={78} height={48} src={'/assets/icons/ethers.png'}>
-            </Image>
-            <Image className='grayscale opacity-40 transition-all duration-300 ease-in-out hover:grayscale-0 hover:opacity-100' alt='typescript logo' width={78} height={48} src={'/assets/icons/next.png'}>
-            </Image>
-            <Image className='grayscale opacity-40 transition-all duration-300 ease-in-out hover:grayscale-0 hover:opacity-100' alt='typescript logo' width={38} height={38} src={'/assets/icons/vite.png'}>
-            </Image>
-            <Image className='grayscale opacity-40 transition-all duration-300 ease-in-out hover:grayscale-0 hover:opacity-100' alt='typescript logo' width={38} height={38} src={'/assets/icons/redux.svg'}>
-            </Image>
-            <Image className='grayscale opacity-40 transition-all duration-300 ease-in-out hover:grayscale-0 hover:opacity-100' alt='typescript logo' width={68} height={48} src={'/assets/icons/websocket.png'}>
-            </Image>
-            <Image className='grayscale opacity-40 transition-all duration-300 ease-in-out hover:grayscale-0 hover:opacity-100' alt='typescript logo' width={48} height={48} src={'/assets/icons/restapi.png'}>
-            </Image>
-            <Image className='grayscale opacity-40 transition-all duration-300 ease-in-out hover:grayscale-0 hover:opacity-100' alt='typescript logo' width={48} height={48} src={'/assets/icons/tailwind.png'}>
-            </Image>
-            <Image className='grayscale opacity-40 transition-all duration-300 ease-in-out hover:grayscale-0 hover:opacity-100' alt='typescript logo' width={48} height={48} src={'/assets/icons/bootstrap.png'}>
-            </Image>
-            <Image className='grayscale opacity-40 transition-all duration-300 ease-in-out hover:grayscale-0 hover:opacity-100' alt='typescript logo' width={48} height={48} src={'/assets/icons/sass.png'}>
-            </Image>
-            <Image className='grayscale opacity-40 transition-all duration-300 ease-in-out hover:grayscale-0 hover:opacity-100' alt='typescript logo' width={48} height={48} src={'/assets/icons/postcss.png'}>
-            </Image>
-            <Image className='grayscale opacity-40 transition-all duration-300 ease-in-out hover:grayscale-0 hover:opacity-100' alt='typescript logo' width={48} height={48} src={'/assets/icons/github.png'}>
-            </Image>
-            <Image className='grayscale opacity-40 transition-all duration-300 ease-in-out hover:grayscale-0 hover:opacity-100' alt='typescript logo' width={78} height={48} src={'/assets/icons/git.png'}>
-            </Image>
-            <Image className='grayscale opacity-40 transition-all duration-300 ease-in-out hover:grayscale-0 hover:opacity-100' alt='typescript logo' width={48} height={48} src={'/assets/icons/html.png'}>
-            </Image>
-            <Image className='grayscale opacity-40 transition-all duration-300 ease-in-out hover:grayscale-0 hover:opacity-100' alt='typescript logo' width={58} height={48} src={'/assets/icons/css3.png'}>
-            </Image>
+            <motion.div initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}  >
+              <Image className='grayscale opacity-40 transition-all duration-300 ease-in-out hover:grayscale-0 hover:opacity-100' alt='typescript logo' width={38} height={38} src={'/assets/icons/typescript.webp'}>
+              </Image>
+            </motion.div>
+            <motion.div initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, ease: "easeOut", delay: 0.15 }}  >
+              <Image className='grayscale opacity-40 transition-all duration-300 ease-in-out hover:grayscale-0 hover:opacity-100' alt='typescript logo' width={38} height={38} src={'/assets/icons/javascript.png'}>
+              </Image>
+            </motion.div>
+            <motion.div initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}  >
+              <Image className='grayscale opacity-40 transition-all duration-300 ease-in-out hover:grayscale-0 hover:opacity-100' alt='typescript logo' width={48} height={48} src={'/assets/icons/web3.png'}>
+              </Image>
+            </motion.div>
+            <motion.div initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, ease: "easeOut", delay: 0.25 }}  >
+              <Image className='grayscale opacity-40 transition-all duration-300 ease-in-out hover:grayscale-0 hover:opacity-100' alt='typescript logo' width={68} height={48} src={'/assets/icons/wagmi.png'}>
+              </Image>
+            </motion.div>
+            <motion.div initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, ease: "easeOut", delay: 0.3 }}  >
+              <Image className='grayscale opacity-40 transition-all duration-300 ease-in-out hover:grayscale-0 hover:opacity-100' alt='typescript logo' width={58} height={48} src={'/assets/icons/viem.png'}>
+              </Image>
+            </motion.div>
+            <motion.div initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, ease: "easeOut", delay: 0.35 }}  >
+              <Image className='grayscale opacity-40 transition-all duration-300 ease-in-out hover:grayscale-0 hover:opacity-100' alt='typescript logo' width={78} height={48} src={'/assets/icons/ethers.png'}>
+              </Image>
+            </motion.div>
+            <motion.div initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, ease: "easeOut", delay: 0.4 }}  >
+              <Image className='grayscale opacity-40 transition-all duration-300 ease-in-out hover:grayscale-0 hover:opacity-100' alt='typescript logo' width={78} height={48} src={'/assets/icons/next.png'}>
+              </Image>
+            </motion.div>
+            <motion.div initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, ease: "easeOut", delay: 0.45 }}  >
+              <Image className='grayscale opacity-40 transition-all duration-300 ease-in-out hover:grayscale-0 hover:opacity-100' alt='typescript logo' width={38} height={38} src={'/assets/icons/vite.png'}>
+              </Image>
+            </motion.div>
+            <motion.div initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, ease: "easeOut", delay: 0.5 }}  >
+              <Image className='grayscale opacity-40 transition-all duration-300 ease-in-out hover:grayscale-0 hover:opacity-100' alt='typescript logo' width={38} height={38} src={'/assets/icons/redux.svg'}>
+              </Image>
+            </motion.div>
+            <motion.div initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, ease: "easeOut", delay: 0.55 }}  >
+              <Image className='grayscale opacity-40 transition-all duration-300 ease-in-out hover:grayscale-0 hover:opacity-100' alt='typescript logo' width={68} height={48} src={'/assets/icons/websocket.png'}>
+              </Image>
+            </motion.div>
+            <motion.div initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, ease: "easeOut", delay: 0.6 }}  >
+              <Image className='grayscale opacity-40 transition-all duration-300 ease-in-out hover:grayscale-0 hover:opacity-100' alt='typescript logo' width={48} height={48} src={'/assets/icons/restapi.png'}>
+              </Image>
+            </motion.div>
+            <motion.div initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, ease: "easeOut", delay: 0.65 }}  >
+              <Image className='grayscale opacity-40 transition-all duration-300 ease-in-out hover:grayscale-0 hover:opacity-100' alt='typescript logo' width={48} height={48} src={'/assets/icons/tailwind.png'}>
+              </Image>
+            </motion.div>
+            <motion.div initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, ease: "easeOut", delay: 0.7 }}  >
+              <Image className='grayscale opacity-40 transition-all duration-300 ease-in-out hover:grayscale-0 hover:opacity-100' alt='typescript logo' width={48} height={48} src={'/assets/icons/bootstrap.png'}>
+              </Image>
+            </motion.div>
+            <motion.div initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, ease: "easeOut", delay: 0.75 }}  >
+              <Image className='grayscale opacity-40 transition-all duration-300 ease-in-out hover:grayscale-0 hover:opacity-100' alt='typescript logo' width={48} height={48} src={'/assets/icons/sass.png'}>
+              </Image>
+            </motion.div>
+            <motion.div initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, ease: "easeOut", delay: 0.8 }}  >
+              <Image className='grayscale opacity-40 transition-all duration-300 ease-in-out hover:grayscale-0 hover:opacity-100' alt='typescript logo' width={48} height={48} src={'/assets/icons/postcss.png'}>
+              </Image>
+            </motion.div>
+            <motion.div initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, ease: "easeOut", delay: 0.85 }}  >
+              <Image className='grayscale opacity-40 transition-all duration-300 ease-in-out hover:grayscale-0 hover:opacity-100' alt='typescript logo' width={48} height={48} src={'/assets/icons/github.png'}>
+              </Image>
+            </motion.div>
+            <motion.div initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, ease: "easeOut", delay: 0.9 }}  >
+              <Image className='grayscale opacity-40 transition-all duration-300 ease-in-out hover:grayscale-0 hover:opacity-100' alt='typescript logo' width={78} height={48} src={'/assets/icons/git.png'}>
+              </Image>
+            </motion.div>
+            <motion.div initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, ease: "easeOut", delay: 0.95 }}  >
+              <Image className='grayscale opacity-40 transition-all duration-300 ease-in-out hover:grayscale-0 hover:opacity-100' alt='typescript logo' width={48} height={48} src={'/assets/icons/html.png'}>
+              </Image>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, ease: "easeOut", delay: 1 }}
+            >
+              <Image className='grayscale opacity-40 transition-all duration-300 ease-in-out hover:grayscale-0 hover:opacity-100' alt='typescript logo' width={58} height={48} src={'/assets/icons/css3.png'}>
+              </Image>
+            </motion.div>
           </div>
         </section>
         <section className='max-w-6xl w-full mx-auto px-4 py-36 relative z-10 flex items-center'>
           <div className="flex-1">
-            <div className="w-full">
-              <Image src={'/assets/images/user-image-2.jpg'} alt='user image' width={100} height={100} className='w-4/5 rounded-2xl'></Image>
-            </div>
+            <motion.div
+              initial={{ opacity: 0, x: -100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, ease: "easeOut", delay: 0.3 }}
+              className="w-full">
+              <Image src={'/assets/images/profile.jpg'} alt='user image' width={1000} height={1000} className='w-4/5 rounded-2xl'></Image>
+            </motion.div>
           </div>
-          <div className="flex-1 flex flex-col gap-6">
-            <h3 className='text-white text-4xl font-bold'>Turning Vision into Interactive Reality</h3>
+          <div className="flex-1 flex flex-col gap-8">
+            <motion.h3
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, ease: "easeOut", delay: 0.4 }}
+              className='text-white text-4xl font-bold'>About Me</motion.h3>
             <div className="">
-              <p className='text-gray-400 text-sm leading-6'>{`I'm a Frontend Developer with a passion for crafting clean, responsive, and user-focused web interfaces using modern technologies like React, Next.js, and Tailwind CSS. I combine strong UI/UX principles, attention to detail, and problem-solving skills to turn ideas into intuitive digital experiences. I thrive in collaborative environments, value clear communication, and aim to bridge the gap between design and development — delivering fast, accessible, and scalable solutions that not only work flawlessly but also feel great to use.`}</p>
+              <motion.p
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, ease: "easeOut", delay: 0.5 }}
+                className='text-gray-400 text-sm leading-6 text-justify'>{`I'm a Frontend Developer with a passion for crafting clean, responsive, and user-focused web interfaces using modern technologies like React, Next.js, and Tailwind CSS. I combine strong UI/UX principles, attention to detail, and problem-solving skills to turn ideas into intuitive digital experiences. I thrive in collaborative environments, value clear communication, and aim to bridge the gap between design and development — delivering fast, accessible, and scalable solutions that not only work flawlessly but also feel great to use.`}</motion.p>
             </div>
+
             <div className="flex items-center  gap-8">
               <motion.div initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, ease: "easeOut", delay: 2 }} className=" flex justify-between gap-2">
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: "easeOut", delay: 0.6 }} className=" flex justify-between gap-2">
                 <h3 className='text-4xl font-bold text-gray-200 flex items-start'>3 <span className='text-gray-200 text-4xl'>+</span></h3>
                 <p className='text-gray-400 text-sm'>Years Of <br /> Experiences</p>
               </motion.div>
               <motion.div initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, ease: "easeOut", delay: 2.2 }} className=" flex justify-between gap-2">
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: "easeOut", delay: 0.7 }} className=" flex justify-between gap-2">
                 <h3 className='text-4xl font-bold text-gray-200 flex items-start'>30 <span className='text-gray-200 text-4xl'>+</span></h3>
                 <p className='text-gray-400 text-sm'>Complete <br /> Project</p>
               </motion.div>
               <motion.div initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, ease: "easeOut", delay: 2.4 }} className=" flex justify-between gap-2">
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: "easeOut", delay: 0.8 }} className=" flex justify-between gap-2">
                 <h3 className='text-4xl font-bold text-gray-200 flex items-start'>10 <span className='text-gray-200 text-4xl'>+</span></h3>
                 <p className='text-gray-400 text-sm'>Clients </p>
               </motion.div>
             </div>
+            <div className="flex items-center gap-6">
+              <motion.a
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, ease: "easeOut", delay: 0.9 }}
+                href='https://www.linkedin.com/in/hafidz-al-afaf-9518b8156/?originalSubdomain=id' target='_blank' className="group size-10 flex items-center justify-center rounded-full bg-gray-900 hover:bg-white transition-all ease-in-out duration-500">
+                <FontAwesomeIcon icon={faLinkedin} className='text-white text-xl group-hover:text-blue-400 transition-all ease-in-out duration-500 group-hover:rotate-45' />
+              </motion.a>
+              <motion.a
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, ease: "easeOut", delay: 1 }}
+                href='https://www.linkedin.com/in/hafidz-al-afaf-9518b8156/?originalSubdomain=id' target='_blank' className="group size-10 flex items-center justify-center rounded-full bg-gray-900 hover:bg-white transition-all ease-in-out duration-500">
+                <FontAwesomeIcon icon={faGithub} className='text-white text-xl group-hover:text-gray-950 transition-all ease-in-out duration-500 group-hover:rotate-45' />
+              </motion.a>
+            </div>
+
           </div >
         </section>
         <section className='max-w-7xl w-full mx-auto px-4 py-20 relative z-10 flex justify-between gap-8 items-center'>
