@@ -10,6 +10,7 @@ import Lottie from 'lottie-react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { useEffect, useState } from 'react';
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 
 export default function Home() {
   const ToolsTexts = [
@@ -326,19 +327,19 @@ export default function Home() {
               <motion.div initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, ease: "easeOut", delay: 0.6 }} className=" flex justify-between gap-2">
-                <h3 className='text-4xl font-bold text-gray-200 flex items-start'>3 <span className='text-gray-200 text-4xl'>+</span></h3>
+                <h3 className='text-4xl font-bold text-gray-200 flex items-start'>4 <span className='text-gray-200 text-4xl'>+</span></h3>
                 <p className='text-gray-400 text-sm'>Years Of <br /> Experiences</p>
               </motion.div>
               <motion.div initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, ease: "easeOut", delay: 0.7 }} className=" flex justify-between gap-2">
-                <h3 className='text-4xl font-bold text-gray-200 flex items-start'>30 <span className='text-gray-200 text-4xl'>+</span></h3>
+                <h3 className='text-4xl font-bold text-gray-200 flex items-start'>49 <span className='text-gray-200 text-4xl'>+</span></h3>
                 <p className='text-gray-400 text-sm'>Complete <br /> Project</p>
               </motion.div>
               <motion.div initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, ease: "easeOut", delay: 0.8 }} className=" flex justify-between gap-2">
-                <h3 className='text-4xl font-bold text-gray-200 flex items-start'>10 <span className='text-gray-200 text-4xl'>+</span></h3>
+                <h3 className='text-4xl font-bold text-gray-200 flex items-start'>18 <span className='text-gray-200 text-4xl'>+</span></h3>
                 <p className='text-gray-400 text-sm'>Clients </p>
               </motion.div>
             </div>
@@ -361,41 +362,195 @@ export default function Home() {
 
           </div >
         </section>
-        <section className='max-w-7xl w-full mx-auto px-4 py-20 relative z-10 flex justify-between gap-8 items-center'>
-          <motion.div initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, ease: "easeOut", delay: 0.6 }} className="flex flex-col gap-4">
-            <h6 className='text-white font-semibold text-lg'>User Centric Thinking</h6>
-            <p className='text-gray-400 text-sm'>Design and build interfaces that are intuitive, accessible and enjoyable to use.</p>
-          </motion.div>
-          <motion.div initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, ease: "easeOut", delay: 0.7 }} className="bg-gray-500 h-20 w-[1px] rounded-full"></motion.div>
-          <motion.div initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, ease: "easeOut", delay: 0.8 }} className="flex flex-col gap-4">
-            <h6 className='text-white font-semibold text-lg'>Atention to Detail</h6>
-            <p className='text-gray-400 text-sm'>Small design inconsistencies or broken UI interactions can negatively affect user experience.</p>
-          </motion.div>
-          <motion.div initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, ease: "easeOut", delay: 0.9 }} className="bg-gray-500 h-20 w-[1px] rounded-full"></motion.div>
-          <motion.div initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, ease: "easeOut", delay: 1 }} className="flex flex-col gap-4">
-            <h6 className='text-white font-semibold text-lg'>Collaboration</h6>
-            <p className='text-gray-400 text-sm'>Work effectively with designers, backend developers, and product managers to bring ideas to life.</p>
-          </motion.div>
-          <motion.div initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, ease: "easeOut", delay: 1.1 }} className="bg-gray-500 h-20 w-[1px] rounded-full"></motion.div>
-          <motion.div initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, ease: "easeOut", delay: 1.2 }} className="flex flex-col gap-4">
-            <h6 className='text-white font-semibold text-lg'>Problem Solving</h6>
-            <p className='text-gray-400 text-sm'>Analyze issues logically, debug efficiently, and create effective solutions.</p>
-          </motion.div>
+        <section className='bg-slate-950 relative z-10'>
+          <div className="max-w-7xl w-full mx-auto px-4 py-20 flex justify-between gap-8 items-center">
+            <motion.div initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, ease: "easeOut", delay: 0.6 }} className="flex flex-col gap-4">
+              <h6 className='text-white font-semibold text-lg'>User Centric Thinking</h6>
+              <p className='text-gray-400 text-sm'>Design and build interfaces that are intuitive, accessible and enjoyable to use.</p>
+            </motion.div>
+            <motion.div initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, ease: "easeOut", delay: 0.7 }} className="bg-gray-500 h-20 w-[1px] rounded-full"></motion.div>
+            <motion.div initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, ease: "easeOut", delay: 0.8 }} className="flex flex-col gap-4">
+              <h6 className='text-white font-semibold text-lg'>Atention to Detail</h6>
+              <p className='text-gray-400 text-sm'>Small design inconsistencies or broken UI interactions can negatively affect user experience.</p>
+            </motion.div>
+            <motion.div initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, ease: "easeOut", delay: 0.9 }} className="bg-gray-500 h-20 w-[1px] rounded-full"></motion.div>
+            <motion.div initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, ease: "easeOut", delay: 1 }} className="flex flex-col gap-4">
+              <h6 className='text-white font-semibold text-lg'>Collaboration</h6>
+              <p className='text-gray-400 text-sm'>Work effectively with designers, backend developers, and product managers to bring ideas to life.</p>
+            </motion.div>
+            <motion.div initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, ease: "easeOut", delay: 1.1 }} className="bg-gray-500 h-20 w-[1px] rounded-full"></motion.div>
+            <motion.div initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, ease: "easeOut", delay: 1.2 }} className="flex flex-col gap-4">
+              <h6 className='text-white font-semibold text-lg'>Problem Solving</h6>
+              <p className='text-gray-400 text-sm'>Analyze issues logically, debug efficiently, and create effective solutions.</p>
+            </motion.div>
+          </div>
         </section>
+
+        <section className='max-w-7xl w-full mx-auto px-4 py-20 relative z-10 flex flex-col gap-8'>
+          <h2 className='text-white text-4xl font-bold'>Selected Work</h2>
+          <div className="grid grid-cols-2 gap-6">
+            <div className="bg-gray-900 p-4 rounded-3xl group flex gap-4 flex-col w-full">
+              <div className="">
+                <Image alt='' src={'/assets/images/project-1.webp'} className='grayscale group-hover:grayscale-0 transition-all ease-in-out duration-300 rounded-2xl w-full ' width={700} height={700} />
+              </div>
+              <div className="flex justify-between items-center gap-4">
+                <h6 className='text-xl font-bold text-white'>RoyalX Launchpool</h6>
+                <p className='text-gray-500'>2024</p>
+              </div>
+              <div className="flex gap-2 items-center">
+                <div className="border border-white border-opacity-30 rounded-full px-3 py-1 text-sm text-white text-opacity-50 transition-all ease-in-out duration-300 hover:border-white hover:text-white">
+                  React
+                </div>
+                <div className="border border-white border-opacity-30 rounded-full px-3 py-1 text-sm text-white text-opacity-50 transition-all ease-in-out duration-300 hover:border-blue-500 hover:text-blue-500">
+                  Typescript
+                </div>
+                <div className="border border-white border-opacity-30 rounded-full px-3 py-1 text-sm text-white text-opacity-50 transition-all ease-in-out duration-300 hover:border-blue-400 hover:text-blue-400">
+                  Tailwind CSS
+                </div>
+                <div className="border border-white border-opacity-30 rounded-full px-3 py-1 text-sm text-white text-opacity-50 transition-all ease-in-out duration-300 hover:border-pink-400 hover:text-pink-400">
+                  Rest API
+                </div>
+              </div>
+            </div>
+            <div className="bg-gray-900 p-4 rounded-3xl group flex gap-4 flex-col w-full">
+              <div className="">
+                <Image alt='' src={'/assets/images/project-2.webp'} className='grayscale group-hover:grayscale-0 transition-all ease-in-out duration-300 rounded-2xl w-full ' width={700} height={700} />
+              </div>
+              <div className="flex justify-between items-center gap-4">
+                <h6 className='text-xl font-bold text-white'>PexBank Exchange</h6>
+                <p className='text-gray-500'>2024</p>
+              </div>
+              <div className="flex gap-2 items-center">
+                <div className="border border-white border-opacity-30 rounded-full px-3 py-1 text-sm text-white text-opacity-50 transition-all ease-in-out duration-300 hover:border-white hover:text-white">
+                  React
+                </div>
+                <div className="border border-white border-opacity-30 rounded-full px-3 py-1 text-sm text-white text-opacity-50 transition-all ease-in-out duration-300 hover:border-blue-500 hover:text-blue-500">
+                  Typescript
+                </div>
+                <div className="border border-white border-opacity-30 rounded-full px-3 py-1 text-sm text-white text-opacity-50 transition-all ease-in-out duration-300 hover:border-blue-400 hover:text-blue-400">
+                  Tailwind CSS
+                </div>
+                <div className="border border-white border-opacity-30 rounded-full px-3 py-1 text-sm text-white text-opacity-50 transition-all ease-in-out duration-300 hover:border-pink-400 hover:text-pink-400">
+                  Rest API
+                </div>
+              </div>
+            </div>
+            <div className="bg-gray-900 p-4 rounded-3xl group flex gap-4 flex-col w-full">
+              <div className="">
+                <Image alt='' src={'/assets/images/project-3.webp'} className='grayscale group-hover:grayscale-0 transition-all ease-in-out duration-300 rounded-2xl w-full ' width={700} height={700} />
+              </div>
+              <div className="flex justify-between items-center gap-4">
+                <h6 className='text-xl font-bold text-white'>PetaSwap</h6>
+                <p className='text-gray-500'>2024</p>
+              </div>
+              <div className="flex gap-2 items-center">
+                <div className="border border-white border-opacity-30 rounded-full px-3 py-1 text-sm text-white text-opacity-50 transition-all ease-in-out duration-300 hover:border-white hover:text-white">
+                  React
+                </div>
+                <div className="border border-white border-opacity-30 rounded-full px-3 py-1 text-sm text-white text-opacity-50 transition-all ease-in-out duration-300 hover:border-blue-500 hover:text-blue-500">
+                  Typescript
+                </div>
+                <div className="border border-white border-opacity-30 rounded-full px-3 py-1 text-sm text-white text-opacity-50 transition-all ease-in-out duration-300 hover:border-blue-400 hover:text-blue-400">
+                  Tailwind CSS
+                </div>
+                <div className="border border-white border-opacity-30 rounded-full px-3 py-1 text-sm text-white text-opacity-50 transition-all ease-in-out duration-300 hover:border-pink-400 hover:text-pink-400">
+                  Rest API
+                </div>
+              </div>
+            </div>
+            <div className="bg-gray-900 p-4 rounded-3xl group flex gap-4 flex-col w-full">
+              <div className="">
+                <Image alt='' src={'/assets/images/project-5.webp'} className='grayscale group-hover:grayscale-0 transition-all ease-in-out duration-300 rounded-2xl w-full ' width={700} height={700} />
+              </div>
+              <div className="flex justify-between items-center gap-4">
+                <h6 className='text-xl font-bold text-white'>CraSwap</h6>
+                <p className='text-gray-500'>2024</p>
+              </div>
+              <div className="flex gap-2 items-center">
+                <div className="border border-white border-opacity-30 rounded-full px-3 py-1 text-sm text-white text-opacity-50 transition-all ease-in-out duration-300 hover:border-white hover:text-white">
+                  React
+                </div>
+                <div className="border border-white border-opacity-30 rounded-full px-3 py-1 text-sm text-white text-opacity-50 transition-all ease-in-out duration-300 hover:border-blue-500 hover:text-blue-500">
+                  Typescript
+                </div>
+                <div className="border border-white border-opacity-30 rounded-full px-3 py-1 text-sm text-white text-opacity-50 transition-all ease-in-out duration-300 hover:border-blue-400 hover:text-blue-400">
+                  Tailwind CSS
+                </div>
+                <div className="border border-white border-opacity-30 rounded-full px-3 py-1 text-sm text-white text-opacity-50 transition-all ease-in-out duration-300 hover:border-pink-400 hover:text-pink-400">
+                  Rest API
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className='bg-slate-950 relative z-10'>
+          <div className="overflow-hidden  max-w-7xl w-full mx-auto px-4 py-24">
+            {/* <div className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-screen bg-hero-radial z-0 opacity-40">
+          </div> */}
+            <div className=" flex gap-20 items-center">
+              <div className="w-2/5 flex flex-col gap-8 items-start">
+                <h6 className='text-white text-4xl font-bold uppercase'>Let’s Connect!</h6>
+                <p className='text-white text-sm leading-7'>{`I'm passionate about building beautiful, responsive, and user-focused interfaces.
+                Whether you're a startup, agency, or individual looking to bring a design to life — I'm here to help.
+                Reach out and let’s discuss how we can make your ideas real.`}</p>
+                <div className="">
+                  <div className="bg-gray-900 py-3 px-5 rounded-2xl flex items-center gap-2 group">
+                    <div className="size-10 rounded-full border border-white border-opacity-20 flex items-center justify-center">
+                      <FontAwesomeIcon icon={faEnvelope} className='text-white text-base' />
+                    </div>
+                    <div className="">
+                      <p className='text-sm font-semibold text-white'>Email</p>
+                      <p className='text-xs text-white text-opacity-50'>contact.hafidzal@gmail.com</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="flex-1 ">
+                <div className="flex flex-col gap-4 mx-auto w-4/5 bg-background p-6 rounded-xl">
+                  <h6 className='text-white font-semibold text-2xl'>LEAVE MESSAGE</h6>
+                  <div className="flex gap-4 flex-col">
+                    <div className="flex items-center gap-3">
+                      <input type="text" className='px-6 py-3 rounded-3xl bg-gray-900 text-white w-full' placeholder='Full Name*' />
+                      <input type="text" className='px-6 py-3 rounded-3xl bg-gray-900 text-white w-full' placeholder='Phone number*' />
+                    </div>
+                    <input type="text" className='px-6 py-3 rounded-3xl bg-gray-900 text-white' placeholder='Email*' />
+                    <input type="text" className='px-6 py-3 rounded-3xl bg-gray-900 text-white' placeholder='Subject*' />
+                    <textarea name="description" className='px-6 py-3 rounded-3xl bg-gray-900 text-white' placeholder='Description' id="description" rows={5}></textarea>
+                    <motion.button
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.8, ease: "easeOut", delay: 1.2 }}
+                      className="bg-primary rounded-full px-10 py-3 text-white text-sm "
+                    >
+                      Submit
+                    </motion.button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <footer className='bg-slate-900 relative z-10'>
+          <div className="max-w-7xl w-full mx-auto px-4 py-6 relative z-10 flex justify-center">
+            <p className="text-sm text-white">&copy; 2025 HafidzAl. All rights reserved.</p>
+          </div>
+        </footer>
 
       </main>
     </>
